@@ -1,1 +1,5 @@
-<p>Miki server component</p>
+<!-- <p>{{'Server'}} no {{ serverID }} is {{serverStatus}}</p> -->
+<p [ngStyle]="{backgroundColor: getColor()}"
+    [ngClass]="{online: serverStatus === 'online'}">
+    {{'Server'}} no {{ serverID }} is {{serverStatus}}</p>
+<!-- <p [ngStyle]="{'background-color': mikFunc}">{{'Server'}} no {{ serverID }} is {{serverStatus}}</p> -->
