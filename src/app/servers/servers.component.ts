@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core'
+import { Component, Input, OnInit } from '@angular/core'
 
 @Component ({
     selector: 'app-servers',
@@ -33,5 +33,17 @@ export class ServersComponent {
         // console.log(event)
         this.serverName = event.target.value;
     }
+
+    mikiVarFull = 'chj';
+
+    @Input() goToServers: any;
+    @Input() goToServers2: number;
+
+    onButtonClick() {
+        // this.goToServers.split
+        console.log(this.goToServers.join(' '));
+    }
+
+
 
 }

@@ -12,4 +12,8 @@ import { Component } from '@angular/core';
 })
 
 export class AppComponent {
+
+  niechIdzieDoServers: string = 'niechIdzieWKońcu2';
+  taTezNiechIdzieDoServers: number = 123;
+
 }

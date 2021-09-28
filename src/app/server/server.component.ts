@@ -1,4 +1,4 @@
-import { Component } from '@angular/core'
+import { Component, Input, Output, EventEmitter } from '@angular/core'
 
 @Component({
   selector: 'app-server',
@@ -18,5 +18,9 @@ constructor() {
 getColor() {
   return this.serverStatus === 'online' ? 'green':'red';
 }
+
+@Input() mikiVar: string;
+
+// @Output() nowazmienna = new EventEmitter<string>();
 
 }
