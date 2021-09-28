@@ -18,8 +18,8 @@ class="form-control"
 
 <!-- <p>{{serverCreationStatus}}</p> -->
 <p *ngIf="serverCreated">Server is created, server Name is {{serverName}}</p>
-<app-server *ngFor="let server of servers" [mikiVar]="mikiVarFull"></app-server>
+<app-server *ngFor="let server of servers" [mikiVar]="mikiVarFull" (wychodziZServer)="onButtonClick($event)"></app-server>
 <p>String: {{goToServers}}</p>
 <p>Liczba: {{goToServers2}}</p>
 
-<button (click)="onButtonClick()">RÓB</button>
+<!-- <button (click)="onButtonClick()">RÓB</button> -->

@@ -6,13 +6,18 @@ import { AppComponent } from './app.component';
 import { ServerComponent } from './server/server.component';
 import { ServersComponent } from './servers/servers.component';
 import { MikiComponent } from './miki/miki.component';
+import { RodzicComponent } from './rodzic/rodzic.component';
+import { DzieckoComponent } from './dziecko/dziecko.component';
+
 
 @NgModule({
   declarations: [
     AppComponent,
     ServerComponent,
     MikiComponent,
-    ServersComponent
+    ServersComponent,
+    RodzicComponent,
+    DzieckoComponent
   ],
   imports: [
     BrowserModule,

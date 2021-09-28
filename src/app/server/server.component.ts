@@ -21,6 +21,10 @@ getColor() {
 
 @Input() mikiVar: string;
 
-// @Output() nowazmienna = new EventEmitter<string>();
+@Output() wychodziZServer = new EventEmitter<string>();
+
+wyjdzZServer(value:string) {
+  this.wychodziZServer.emit(value);
+}
 
 }

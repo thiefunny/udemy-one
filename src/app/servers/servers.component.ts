@@ -15,7 +15,7 @@ export class ServersComponent {
     serverCreationStatus = 'Server not available';
     serverName='InitialServer';
     serverCreated = false;
-    servers = ['Server Mikiego', 'Server Kacperka']
+    servers = new Array(10);
 
     constructor() {
         setTimeout(_ => {
@@ -39,11 +39,8 @@ export class ServersComponent {
     @Input() goToServers: any;
     @Input() goToServers2: number;
 
-    onButtonClick() {
-        // this.goToServers.split
-        console.log(this.goToServers.join(' '));
+    onButtonClick(cos) {
+        console.log(cos)
     }
-
-
 
 }
