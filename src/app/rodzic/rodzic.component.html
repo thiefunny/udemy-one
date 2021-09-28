@@ -1,0 +1,3 @@
+<app-dziecko (dzieckoEmmiter)='onReceivedDziecko($event)'></app-dziecko>
+<p *ngFor="let dziecko of receivedDziecko; let i = index" [ngStyle]="{backgroundColor: dzieckoColor(i)}" [ngClass]="{'white-text': i < 10}">{{dziecko}}</p>
+<p *ngIf="siema()">SIEMA</p>

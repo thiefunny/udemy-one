@@ -2,13 +2,27 @@ import { Component } from "@angular/core";
 
 @Component({
     selector: 'app-rodzic',
-    template: "<app-dziecko (dzieckoEmmiter)='onReceivedDziecko($event)'></app-dziecko>"
+    templateUrl: './rodzic.component.html',
+    styleUrls: ['./rodzic.component.css']
 })
 
 export class RodzicComponent {
 
+    receivedDziecko = [];
+    dzieckoIndex: number = 0;
+
     onReceivedDziecko(value: string) {
-        console.log(value)
+        this.receivedDziecko.push(`${value} ${Math.random()}`);
+        this.dzieckoIndex++;
+        console.log(this.dzieckoIndex)
+        // console.log(this.receivedDziecko)
     }
 
+    dzieckoColor(index) {
+        return `rgb(${index*10+100}, ${index*10+100}, ${index*10+100})`
+    }
+
+    siema() {
+        return this.dzieckoIndex %5 === 0 ? true : false;
+    }
 }
